@@ -1,0 +1,967 @@
+@import url('https://fonts.cdnfonts.com/css/ds-digital');
+
+.paused {
+    animation-play-state: paused;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+/* Portrait and Landscape */
+@media only screen and (max-width: 767px) {
+    .background {
+        background-color: #01ff19;
+        width: 100vw;
+        height: 100vh;
+        font-family: 'Arial', sans-serif;
+        animation: 1s colorJumpBackground infinite;
+        animation-timing-function: step-end;
+    }
+
+    .cfbgposition {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .cfbgFont {
+        font-weight: bold;
+        font-size: 5rem;
+        text-align: center;
+    }
+
+    .loadingText {
+        width: 50%;
+        border: 1px solid black;
+        padding: .5rem;
+        display: flex;
+        justify-content: space-between;
+        animation: 1s colorJump infinite;
+        animation-timing-function: step-end;
+    }
+
+    input.transparent-input {
+        background-color: transparent;
+        border: 1px solid transparent;
+        box-sizing: border-box;
+        height: 165%;
+        margin-top: -10%;
+        margin-left: 5%;
+        width: 100%;
+        font-size: .5rem;
+        font-weight: bold;
+        animation: 1s placeholderColorChange infinite;
+        animation-timing-function: step-end;
+    }
+
+    input:focus {
+        border: 1px solid transparent;
+        outline: none;
+        box-shadow: none;
+
+    }
+
+    .enterText {
+        font-weight: bold;
+        letter-spacing: .1rem;
+    }
+
+
+    .liveIcon {
+        transform: scale(.7);
+    }
+
+    .iconstyle {
+        border: 1px solid black;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        padding: 0 auto;
+        animation: 1s iconColorChange infinite;
+        animation-timing-function: step-end;
+    }
+
+    .autorsText {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        letter-spacing: .1rem;
+        padding: 1rem;
+        font-weight: bold;
+        animation: 1s placeholderColorChange infinite;
+        animation-timing-function: step-end;
+    }
+
+    .clockContainer {
+        min-height: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #countdown {
+        font-size: 2.5rem;
+        margin-top: 1.5rem;
+        font-family: 'DS-Digital', sans-serif;
+        background-clip: text;
+    }
+
+    @keyframes colorJumpBackground {
+        0% {
+            background-color: #01ff19;
+            color: black;
+        }
+
+        50% {
+            background-color: black;
+            color: #01ff19;
+        }
+    }
+
+    @keyframes colorJump {
+        0% {
+            background-color: #01ff19;
+            color: black;
+            border: 1px solid black;
+        }
+
+        50% {
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+        }
+    }
+
+    @keyframes placeholderColorChange {
+        0% {
+            color: black;
+        }
+
+        50% {
+            color: white;
+        }
+
+    }
+
+
+    @keyframes iconColorChange {
+        0% {
+            border: 1px solid black;
+        }
+
+        50% {
+            border: 1px solid white;
+        }
+    }
+}
+
+/* Tablets (portrait and landscape): */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .background {
+        background-color: #01ff19;
+        width: 100vw;
+        height: 100vh;
+        font-family: 'Arial', sans-serif;
+        animation: 1s colorJumpBackground infinite;
+        animation-timing-function: step-end;
+    }
+
+    .cfbgposition {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .cfbgFont {
+        font-weight: bold;
+        font-size: 7rem;
+        text-align: center;
+    }
+
+    .loadingText {
+        width: 30%;
+        border: 1px solid black;
+        padding: .5rem;
+        display: flex;
+        justify-content: space-between;
+        animation: 1s colorJump infinite;
+        animation-timing-function: step-end;
+    }
+
+    input.transparent-input {
+        background-color: transparent;
+        border: 1px solid transparent;
+        box-sizing: border-box;
+        height: 165%;
+        margin-top: -10%;
+        margin-left: -0%;
+        width: 100%;
+        font-size: .6rem;
+        font-weight: bold;
+        animation: 1s placeholderColorChange infinite;
+        animation-timing-function: step-end;
+    }
+
+    input:focus {
+        border: 1px solid transparent;
+        outline: none;
+        box-shadow: none;
+
+    }
+
+    .enterText {
+        font-weight: bold;
+        letter-spacing: .1rem;
+    }
+
+
+    .liveIcon {
+        transform: scale(.8);
+    }
+
+
+    .iconstyle {
+        border: 1px solid black;
+        height: 22px;
+        width: 22px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        padding: 0 auto;
+        animation: 1s iconColorChange infinite;
+        animation-timing-function: step-end;
+    }
+
+    .autorsText {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        letter-spacing: .1rem;
+        padding: 1rem;
+        font-weight: bold;
+        animation: 1s placeholderColorChange infinite;
+        animation-timing-function: step-end;
+    }
+
+    .clockContainer {
+        min-height: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #countdown {
+        font-size: 3.5rem;
+        margin-top: 1.5rem;
+        font-family: 'DS-Digital', sans-serif;
+        background-clip: text;
+    }
+
+
+
+    @keyframes colorJumpBackground {
+        0% {
+            background-color: #01ff19;
+            color: black;
+        }
+
+        50% {
+            background-color: black;
+            color: #01ff19;
+        }
+    }
+
+    @keyframes colorJump {
+        0% {
+            background-color: #01ff19;
+            color: black;
+            border: 1px solid black;
+        }
+
+        50% {
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+        }
+    }
+
+    @keyframes placeholderColorChange {
+        0% {
+            color: black;
+        }
+
+        50% {
+            color: white;
+        }
+
+    }
+
+
+    @keyframes iconColorChange {
+        0% {
+            border: 1px solid black;
+        }
+
+        50% {
+            border: 1px solid white;
+        }
+    }
+}
+
+/* Small desktops and laptops: */
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+    .background {
+        background-color: #01ff19;
+        width: 100vw;
+        height: 100vh;
+        font-family: 'Arial', sans-serif;
+        animation: 1s colorJumpBackground infinite;
+        animation-timing-function: step-end;
+    }
+
+    .cfbgposition {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .cfbgFont {
+        font-weight: bold;
+        font-size: 8rem;
+        text-align: center;
+    }
+
+    .loadingText {
+        width: 25%;
+        border: 1px solid black;
+        padding: .5rem;
+        display: flex;
+        justify-content: space-between;
+        animation: 1s colorJump infinite;
+        animation-timing-function: step-end;
+    }
+
+    input.transparent-input {
+        background-color: transparent;
+        border: 1px solid transparent;
+        box-sizing: border-box;
+        height: 165%;
+        margin-top: -10%;
+        margin-left: -0%;
+        width: 100%;
+        font-size: .9rem;
+        font-weight: bold;
+        animation: 1s placeholderColorChange infinite;
+        animation-timing-function: step-end;
+    }
+
+    input:focus {
+        border: 1px solid transparent;
+        outline: none;
+        box-shadow: none;
+
+    }
+
+    .enterText {
+        font-weight: bold;
+        letter-spacing: .1rem;
+    }
+
+
+    .liveIcon {
+        transform: scale(.9);
+    }
+
+
+    .iconstyle {
+        border: 1px solid black;
+        height: 23px;
+        width: 23px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        padding: 0 auto;
+        animation: 1s iconColorChange infinite;
+        animation-timing-function: step-end;
+    }
+
+    .autorsText {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        letter-spacing: .1rem;
+        padding: 1rem;
+        font-weight: bold;
+        animation: 1s placeholderColorChange infinite;
+        animation-timing-function: step-end;
+    }
+
+    .clockContainer {
+        min-height: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #countdown {
+        font-size: 4rem;
+        margin-top: 1.5rem;
+        font-family: 'DS-Digital', sans-serif;
+        background-clip: text;
+    }
+
+
+    @keyframes colorJumpBackground {
+        0% {
+            background-color: #01ff19;
+            color: black;
+        }
+
+        50% {
+            background-color: black;
+            color: #01ff19;
+        }
+    }
+
+    @keyframes colorJump {
+        0% {
+            background-color: #01ff19;
+            color: black;
+            border: 1px solid black;
+        }
+
+        50% {
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+        }
+    }
+
+    @keyframes placeholderColorChange {
+        0% {
+            color: black;
+        }
+
+        50% {
+            color: white;
+        }
+
+    }
+
+
+    @keyframes iconColorChange {
+        0% {
+            border: 1px solid black;
+        }
+
+        50% {
+            border: 1px solid white;
+        }
+    }
+}
+
+/* Medium-sized desktops and laptops: */
+@media only screen and (min-width: 1281px) and (max-width: 1440px) {
+    .background {
+        background-color: #01ff19;
+        width: 100vw;
+        height: 100vh;
+        font-family: 'Arial', sans-serif;
+        animation: 1s colorJumpBackground infinite;
+        animation-timing-function: step-end;
+    }
+
+    .cfbgposition {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .cfbgFont {
+        font-weight: bold;
+        font-size: 10rem;
+        text-align: center;
+    }
+
+    .loadingText {
+        width: 25%;
+        border: 1px solid black;
+        padding: .5rem;
+        display: flex;
+        justify-content: space-between;
+        animation: 1s colorJump infinite;
+        animation-timing-function: step-end;
+    }
+
+    input.transparent-input {
+        background-color: transparent;
+        border: 1px solid transparent;
+        box-sizing: border-box;
+        height: 165%;
+        margin-top: -10%;
+        margin-left: -0%;
+        width: 100%;
+        font-size: 1rem;
+        font-weight: bold;
+        animation: 1s placeholderColorChange infinite;
+        animation-timing-function: step-end;
+    }
+
+    input:focus {
+        border: 1px solid transparent;
+        outline: none;
+        box-shadow: none;
+
+    }
+
+    .enterText {
+        font-weight: bold;
+        letter-spacing: .1rem;
+    }
+
+    .iconstyle {
+        border: 1px solid black;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        padding: 0 auto;
+        animation: 1s iconColorChange infinite;
+        animation-timing-function: step-end;
+    }
+
+    .autorsText {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        letter-spacing: .1rem;
+        padding: 1rem;
+        font-weight: bold;
+        animation: 1s placeholderColorChange infinite;
+        animation-timing-function: step-end;
+    }
+
+    .clockContainer {
+        min-height: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #countdown {
+        font-size: 5rem;
+        margin-top: 1.5rem;
+        font-family: 'DS-Digital', sans-serif;
+        background-clip: text;
+    }
+
+
+
+    @keyframes colorJumpBackground {
+        0% {
+            background-color: #01ff19;
+            color: black;
+        }
+
+        50% {
+            background-color: black;
+            color: #01ff19;
+        }
+    }
+
+    @keyframes colorJump {
+        0% {
+            background-color: #01ff19;
+            color: black;
+            border: 1px solid black;
+        }
+
+        50% {
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+        }
+    }
+
+    @keyframes placeholderColorChange {
+        0% {
+            color: black;
+        }
+
+        50% {
+            color: white;
+        }
+
+    }
+
+
+    @keyframes iconColorChange {
+        0% {
+            border: 1px solid black;
+        }
+
+        50% {
+            border: 1px solid white;
+        }
+    }
+}
+
+/* Medium-sized desktops and laptops: */
+@media only screen and (min-width: 1441px) {
+    .background {
+        background-color: #01ff19;
+        width: 100vw;
+        height: 100vh;
+        font-family: 'Arial', sans-serif;
+        animation: 1s colorJumpBackground infinite;
+        animation-timing-function: step-end;
+    }
+
+    .cfbgposition {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .cfbgFont {
+        font-weight: bold;
+        font-size: 10rem;
+        text-align: center;
+    }
+
+    .loadingText {
+        width: 20%;
+        border: 1px solid black;
+        padding: .5rem;
+        display: flex;
+        justify-content: space-between;
+        animation: 1s colorJump infinite;
+        animation-timing-function: step-end;
+    }
+
+    input.transparent-input {
+        background-color: transparent;
+        border: 1px solid transparent;
+        box-sizing: border-box;
+        height: 165%;
+        margin-top: -10%;
+        margin-left: -0%;
+        width: 100%;
+        font-size: 1rem;
+        font-weight: bold;
+        animation: 1s placeholderColorChange infinite;
+        animation-timing-function: step-end;
+    }
+
+    input:focus {
+        border: 1px solid transparent;
+        outline: none;
+        box-shadow: none;
+
+    }
+
+    .enterText {
+        font-weight: bold;
+        letter-spacing: .1rem;
+    }
+
+    .iconstyle {
+        border: 1px solid black;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        padding: 0 auto;
+        animation: 1s iconColorChange infinite;
+        animation-timing-function: step-end;
+    }
+
+    .autorsText {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        letter-spacing: .1rem;
+        padding: 1rem;
+        font-weight: bold;
+        animation: 1s placeholderColorChange infinite;
+        animation-timing-function: step-end;
+    }
+
+    .clockContainer {
+        min-height: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #countdown {
+        font-size: 5rem;
+        margin-top: 1.5rem;
+        font-family: 'DS-Digital', sans-serif;
+        background-clip: text;
+    }
+
+
+
+    @keyframes colorJumpBackground {
+        0% {
+            background-color: #01ff19;
+            color: black;
+        }
+
+        50% {
+            background-color: black;
+            color: #01ff19;
+        }
+    }
+
+    @keyframes colorJump {
+        0% {
+            background-color: #01ff19;
+            color: black;
+            border: 1px solid black;
+        }
+
+        50% {
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+        }
+    }
+
+    @keyframes placeholderColorChange {
+        0% {
+            color: black;
+        }
+
+        50% {
+            color: white;
+        }
+
+    }
+
+
+    @keyframes iconColorChange {
+        0% {
+            border: 1px solid black;
+        }
+
+        50% {
+            border: 1px solid white;
+        }
+    }
+}
+
+/* Media query for Galaxy Fold */
+@media only screen and (max-width: 280px) {
+    .background {
+        background-color: #01ff19;
+        width: 100vw;
+        height: 100vh;
+        font-family: 'Arial', sans-serif;
+        animation: 1s colorJumpBackground infinite;
+        animation-timing-function: step-end;
+    }
+
+    .cfbgposition {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .cfbgFont {
+        font-weight: bold;
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .loadingText {
+        width: 50%;
+        border: 1px solid black;
+        padding: .2rem;
+        display: flex;
+        justify-content: space-between;
+        animation: 1s colorJump infinite;
+        animation-timing-function: step-end;
+    }
+
+    input.transparent-input {
+        background-color: transparent;
+        border: 1px solid transparent;
+        box-sizing: border-box;
+        height: 165%;
+        margin-top: -10%;
+        margin-left: 5%;
+        width: 100%;
+        font-size: .5rem;
+        font-weight: bold;
+        animation: 1s placeholderColorChange infinite;
+        animation-timing-function: step-end;
+    }
+
+    input:focus {
+        border: 1px solid transparent;
+        outline: none;
+        box-shadow: none;
+
+    }
+
+    .enterText {
+        font-weight: bold;
+        letter-spacing: .1rem;
+    }
+
+    .iconstyle {
+        border: 1px solid black;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        padding: 0 auto;
+        animation: 1s iconColorChange infinite;
+        animation-timing-function: step-end;
+    }
+
+    .autorsText {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        letter-spacing: .1rem;
+        padding: 1rem;
+        font-weight: bold;
+    }
+
+    .clockContainer {
+        min-height: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #countdown {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+        font-family: 'DS-Digital', sans-serif;
+        background-clip: text;
+    }
+
+    @keyframes colorJumpBackground {
+        0% {
+            background-color: #01ff19;
+            color: black;
+        }
+
+        50% {
+            background-color: black;
+            color: #01ff19;
+        }
+    }
+
+    @keyframes colorJump {
+        0% {
+            background-color: #01ff19;
+            color: black;
+            border: 1px solid black;
+        }
+
+        50% {
+            background-color: black;
+            color: #01ff19;
+            border: 1px solid #01ff19;
+        }
+    }
+
+    @keyframes placeholderColorChange {
+        0% {
+            color: black;
+        }
+
+        50% {
+            color: #01ff19;
+        }
+
+    }
+
+
+    @keyframes iconColorChange {
+        0% {
+            border: 1px solid black;
+        }
+
+        50% {
+            border: 1px solid #01ff19;
+        }
+    }
+}
