@@ -1,17 +1,19 @@
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../styling/homepage.css'
 import { FaStar } from "react-icons/fa";
-import { useMyContext } from '../context/useContext';
 import { Modal, DatePicker, TimePicker, Form, Input } from 'antd';
 import dayjs from 'dayjs';
 import { useForm } from 'antd/es/form/Form';
 
 const HomePage = () => {
     const [form] = useForm();
-    const { myIkimasState, setMyPasswordState, myPasswordState } = useMyContext();
     const [counter, setCounter] = useState("- - : - - : - - : - -");
     const [isCounterVisible, setIsCounterVisible] = useState(false);
     const [inputValue, setInputValue] = useState('ENTER THE PASSWORD..');
+    const initialState = 'inicijator';
+    const passwordState = 'dukidule';
+    const [myIkimasState, setMyIkimasState] = useState(initialState);
+    const [myPasswordState, setMyPasswordState] = useState(passwordState);
     const [tagetTime, setTargetTime] = useState({
         year: 0,
         month: 0,

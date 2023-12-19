@@ -6,9 +6,9 @@ function App() {
 
   return (
     <>
-      dusan
+      {/* dusan */}
       {/* <MyContextProvider> */}
-      {/* <HomePage /> */}
+      <HomePage />
       {/* </MyContextProvider> */}
     </>
   )
